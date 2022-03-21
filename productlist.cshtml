@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Arthmeticoperation>
+
+<div class=" container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Product List</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-action="ArthOper" class="btn btn-primary">Create New Gatagory</a>
+        </div>
+    </div>
+</div>
+
+<table class="table table-bordered table-striped" onchange="btnval">
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th> Price</th>
+            <th>Quantity </th>
+            <th>Discount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.ArthId</td>
+            <td width="50%">@item.ItemPrice</td>
+            <td width="50%">@item.ItemQuantity</td>
+            <td width="50%">@item.Discount</td>
+            <td width="50%">@item.Total</td>
+            <td class="text-center">
+                <div class="w-75 btn-group " role="group">
+                    <a asp-controller="Codex" asp-route-Id="@item.ArthId" asp-action="Edit" class="btn btn-primary">Edit</a>
+                    <a asp-controller="Codex" asp-route-DeleteId="@item.ArthId" asp-action="Deleted" class="btn btn-danger">Delete</a>
+                </div>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+

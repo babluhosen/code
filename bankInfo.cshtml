@@ -1,0 +1,23 @@
+﻿@model Code.Models.bank
+@{
+    ViewData["Title"] = "branchdropdown";
+}
+
+
+
+
+
+<form asp-action="bankInfo" asp-controller="Codex" method="post">
+
+    <div class="row">
+        <div class="col-md-2">
+            <input type="text"asp-for="BankName" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <input type="submit" name="btnSubmit" value="Submit" class="btn btn-success" />
+        </div>
+    </div>
+    <
+</form>

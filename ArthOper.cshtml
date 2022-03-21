@@ -1,0 +1,56 @@
+﻿@model Code.Models.Arthmeticoperation
+    
+        <form method="post" asp- action="ArthOper">
+            <fieldset>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group" id="#bor">
+                                <label >Item price</label>
+                                <input asp-for="ItemPrice" value="" class="form-control" />
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Quantity</label>
+                                <input asp-for="ItemQuantity" class="form-control" />
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Discount</label>
+                                <input asp-for="Discount" value="" class="form-control" />
+                            </div>
+
+                        </div>
+
+
+                        
+                        
+                        <div class="col-lg-6">
+                            <div class="form-group">
+
+                                <input type="submit" value=" Total" class="btn btn bg-success"asp-action="productlist" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+   
+  
+    <script>
+        var unit = ItemPrice;
+        var qun = ItemQuantity;
+        var dis = Discount;
+        Total = (unit + qun) - dis;
+        console.log(Total)
+        document.getElementById('body').innerHTML = Total;
+    </script>

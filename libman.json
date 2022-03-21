@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "cssobj@1.3.6",
+      "destination": "wwwroot/css/cssobj/",
+      "files": [
+        "cssobj.min.js"
+      ]
+    }
+  ]
+}
